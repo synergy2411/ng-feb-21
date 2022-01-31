@@ -90,3 +90,4 @@
 
 # Compilation Context - ts-config.json file
 > tsc --init
+> tsc --watch

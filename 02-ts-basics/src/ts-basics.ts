@@ -36,7 +36,6 @@ window.onload = () => {
     const btnSubmit : HTMLButtonElement = <HTMLButtonElement> document.getElementById("btnSubmit");
 
     btnSubmit.addEventListener("click", event => {
-        console.log("Clicked")
         if(username.value === ""){
             alert("Please enter your name first")
         }else{

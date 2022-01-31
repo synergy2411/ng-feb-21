@@ -24,16 +24,15 @@
 //     name : "..."
 // }
 // console.log(userZ);
-window.onload = () => {
-    const username = document.getElementById("username");
-    const btnSubmit = document.getElementById("btnSubmit");
-    btnSubmit.addEventListener("click", event => {
-        console.log("Clicked");
+window.onload = function () {
+    var username = document.getElementById("username");
+    var btnSubmit = document.getElementById("btnSubmit");
+    btnSubmit.addEventListener("click", function (event) {
         if (username.value === "") {
             alert("Please enter your name first");
         }
         else {
-            alert(`Hello ${username.value}`);
+            alert("Hello ".concat(username.value));
         }
     });
 };
