@@ -60,14 +60,30 @@ function delay(){
     return promise;
 }
 
-// Consumer Code
-function consumePromise(){
-    delay()
-    .then(function(value){
-        console.log(value)
-    }).catch(function(err){
-        console.log(err)
-    })
+// Async...Await
+
+async function consumePromise(){
+    try{
+        var value = await delay()
+        console.log(value);
+    }catch(err){
+        console.log("[ERROR]", err);
+    }
 }
 
 consumePromise();
+
+
+
+
+// Consumer Code
+// function consumePromise(){
+//     delay()
+//     .then(function(value){
+//         console.log(value)
+//     }).catch(function(err){
+//         console.log(err)
+//     })
+// }
+
+// consumePromise();
