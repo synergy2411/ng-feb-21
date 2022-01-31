@@ -47,6 +47,7 @@
 - Map / Set
 - Class / inheritance
 - Decorators
+- Promise
 
 
 # Async Concepts - time consuming
@@ -66,4 +67,4 @@
     : then() - consume the promise, if resolved
     : catch() - consume the promise, if rejected
 - Async...await : Another way to consume the promise API
-- Observables
+- Observables : streams on which series of data flow at certain time interval

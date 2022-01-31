@@ -50,19 +50,10 @@
 // PROMISE API
 
 // Producer Code
-function delay(){
-    var promise = new Promise(function(resolve, reject){
-        setTimeout(function(){
-            // resolve({message : "SUCCESS"})
-            reject(new Error("Something bad happened"))
-        }, 3000);
-    })
-    return promise;
-}
+var delay = () => new Promise((resolve, reject) => setTimeout(() => reject(new Error("Something bad happened")), 3000))
 
 // Async...Await
-
-async function consumePromise(){
+var consumePromise = async() => {
     try{
         var value = await delay()
         console.log(value);
