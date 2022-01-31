@@ -321,10 +321,13 @@
 //     "# of friends" : 5
 // }
 
+// let arr = ["...", "..."];
+
 // const map = new Map()
 // map.set("name", "Foo");
 // map.set(true, 1)
 // map.set(user, "John Doe")
+// map.set(arr, "My Array Value")
 
 // console.log("Name : ", map.get("name"))
 
@@ -350,30 +353,28 @@
 
 // - Class / inheritance
 
-class Person{
-    constructor(name){
-        this.name = name;
-    }
-    getName(){
-        return this.name;
-    }
-}
+// class Person{
+//     constructor(name){
+//         this.name = name;
+//     }
+//     getName(){
+//         return this.name;
+//     }
+// }
 
-class Student extends Person{
-    constructor(studId, name, courseName){
-        super(name);
-        this.studId = studId;
-        this.courseName = courseName;
-    }
-    getDetails(){
-        return `Student Name : ${this.getName()}, Student ID : ${this.studId}, Course Name : ${this.courseName}`;
-    }
-}
+// class Student extends Person{
+//     constructor(studId, name, courseName){
+//         super(name);
+//         this.studId = studId;
+//         this.courseName = courseName;
+//     }
+//     getDetails(){
+//         return `Student Name : ${this.getName()}, Student ID : ${this.studId}, Course Name : ${this.courseName}`;
+//     }
+// }
 
-let foo = new Student("F0001","Foo", "Angular");
-console.log(foo.getDetails())
-
-
+// let foo = new Student("F0001","Foo", "Angular");
+// console.log(foo.getDetails())
 
 
 
@@ -388,4 +389,20 @@ console.log(foo.getDetails())
 
 
 
-// - Decorators
+
+
+// - Decorators | Annotation - for meta programming; always prefixed with '@'
+// - Simple functions for supplying the meta information
+// - Class / Property / Methods / Paramters
+
+
+// function myDecorator(target, key){
+//     console.log("Target : ", target);
+//     console.log("Key : ", key)
+// }
+
+
+// class Test{
+//     @myDecorator
+//     // username = "Foo"
+// }
