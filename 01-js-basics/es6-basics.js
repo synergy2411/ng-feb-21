@@ -137,19 +137,17 @@
 // console.log(newCountries);
 
 
-var state = {
-    counter : 101,
-    todo : "to pot the plants"
-}
+// var state = {
+//     counter : 101,
+//     todo : "to pot the plants"
+// }
 
-var newState = {
-    ...state,
-    result : [state.counter]
-}
+// var newState = {
+//     ...state,
+//     result : [state.counter]
+// }
 
-console.log(newState);
-
-
+// console.log(newState);
 
 
 
@@ -163,8 +161,122 @@ console.log(newState);
 
 
 
-// - Template String
-// - Block Scope Variables
+
+
+// - Template String / Template Literals - " " | ' ' | ` ` (back tick)
+// - Embed variable within string without ( + ) operator
+// - Multiline string without ( \n ) operator
+
+// var username = "John";
+// var age = 32;
+
+// var str = `Hello from ${username}!!
+// I'm ${age} years old.
+
+// `
+
+// console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// - Block Scope Variable - restrict the scope of the variable to the nearest block
+// - let : other types
+// - const : declares constant variables
+
+// function demo(arr){
+//     if(arr.length > 2){
+//         let LOAD = "LOADING";
+//         console.log(FLASH);             // undefined | "not defined"
+//     }else{
+//         let FLASH = "FLASHING"
+//     }
+// }
+
+// demo([1,2,3,4])
+
+
+// const USERNAME = "Foo";
+
+// USERNAME = "Bar";
+
+// const user = {
+//     name : "Foo"
+// }
+
+// user = {
+//     name : "Baz"
+// }
+
+// user.name = "Bar";
+
+// console.log(user.name);     // ?
+
+
+// const items = ["Bag", "Pencil", "Eraser"];
+
+// items = ["", "", "", ""]
+
+// items.push("Carpet");
+
+// console.log(items);
+
+
+// let userA = {
+//     name : "A"
+// }
+
+// let userB = userA;
+
+// userB.name = "B";
+
+// console.log(userA.name);                // ?
+
+
+// let x = 101;
+
+// let y = x;
+
+// y = 202;
+
+// console.log(x);     // ?
+
+
+const books = ["book1", "book2"];
+
+const newBooks = books;
+
+newBooks.push("Book3");
+
+console.log(books.length);      // ?
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Default / optional Parameter
 // - Map / Set
 // - Class / inheritance

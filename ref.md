@@ -1,6 +1,6 @@
 # Break Time
 - Tea/Coffee : 10:00AM - 10:20AM (20 Minutes) 
-- Lunch : 12:30PM - 01:20PM (50 Minutes)
+- Lunch : 12:30PM - 01:30PM (60 Minutes)
 - Tea/Coffee : 03:00PM - 03:20PM (20 Minutes)
 
 
@@ -68,3 +68,8 @@
     : catch() - consume the promise, if rejected
 - Async...await : Another way to consume the promise API
 - Observables : streams on which series of data flow at certain time interval
+
+
+# Types in JavaScript
+- Primitive : String, Numbers, Booleans
+- Reference : Array, Object, Function, Date
