@@ -257,13 +257,13 @@
 // console.log(x);     // ?
 
 
-const books = ["book1", "book2"];
+// const books = ["book1", "book2"];
 
-const newBooks = books;
+// const newBooks = books;
 
-newBooks.push("Book3");
+// newBooks.push("Book3");
 
-console.log(books.length);      // ?
+// console.log(books.length);      // ?
 
 
 
@@ -278,6 +278,114 @@ console.log(books.length);      // ?
 
 
 // - Default / optional Parameter
+
+// const mul = (n1, n2 = 2) => n1 * n2;
+
+// console.log(mul(2,4))
+// console.log(mul(3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Map / Set
+
+
+// let set = new Set()
+
+// set.add("John")
+// set.add("Jenny")
+// set.add("James")
+// set.add("John")
+
+// console.log(set.size)
+
+// for(let key of set.keys()){
+//     console.log("[KEY]", key)
+// }
+
+
+
+// let user = {
+//     "name" : "Foo",
+//     "age" : 32,
+//     "# of friends" : 5
+// }
+
+// const map = new Map()
+// map.set("name", "Foo");
+// map.set(true, 1)
+// map.set(user, "John Doe")
+
+// console.log("Name : ", map.get("name"))
+
+// console.log(map.get(true))
+// console.log(map.get(user))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Class / inheritance
+
+class Person{
+    constructor(name){
+        this.name = name;
+    }
+    getName(){
+        return this.name;
+    }
+}
+
+class Student extends Person{
+    constructor(studId, name, courseName){
+        super(name);
+        this.studId = studId;
+        this.courseName = courseName;
+    }
+    getDetails(){
+        return `Student Name : ${this.getName()}, Student ID : ${this.studId}, Course Name : ${this.courseName}`;
+    }
+}
+
+let foo = new Student("F0001","Foo", "Angular");
+console.log(foo.getDetails())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Decorators
