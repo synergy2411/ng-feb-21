@@ -406,3 +406,17 @@
 //     @myDecorator
 //     // username = "Foo"
 // }
+
+
+let x = 101;
+console.log(typeof(x));     // number
+
+x = "Some string"
+console.log(typeof(x));     // string
+
+x = {
+    name : "Foo"
+}
+console.log(typeof(x));     // object
+
+x = ["...", "..."]

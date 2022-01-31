@@ -73,3 +73,20 @@
 # Types in JavaScript
 - Primitive : String, Numbers, Booleans
 - Reference : Array, Object, Function, Date
+
+
+# What is TypeScript?
+- Superset of JavaScript given by Microsoft
+- Type Definition
+- Type Robust
+- Object Oriented
+- ES6+ Features
+- Angular itself programmed in TS
+
+
+# To install Typescript compiler
+> npm install typescript -g
+> tsc --version
+
+# Compilation Context - ts-config.json file
+> tsc --init
