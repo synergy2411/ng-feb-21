@@ -1,7 +1,13 @@
 <div class="container">
 <p class="display-4 text-center">The Users App</p>
 <ul class="list-group">
-  <li class="list-group-item">
+  <li class="list-group-item" *ngFor="let user of users; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd">
+    <div class="row">
+      <div class="col-12">
+        Index : {{ i }}
+        is this First Element? : {{ isFirst }}
+      </div>
+    </div>
     <div class="row">
       <div class="col-4 text-center">
         <app-user-img (childEvent)="onMoreInfo($event)"
