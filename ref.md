@@ -136,3 +136,7 @@
 
 
 > npm install bootstrap@4 
+
+# Component Types
+- Smart | Container | Parent (UsersComponent) - business logic, contains other component
+- Dump | Presentational | Child (UserImg, UserInfo) - receives data from parent component to create the UI

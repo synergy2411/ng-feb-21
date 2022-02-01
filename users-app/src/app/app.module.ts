@@ -10,6 +10,7 @@ import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-
 import { HighlightDirective } from './directives/highlight.directive';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -20,7 +21,8 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
     LifeCycleDemoComponent,
     HighlightDirective,
     PipeDemoComponent,
-    CountryCodePipe
+    CountryCodePipe,
+    ReversePipe
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
