@@ -1,2 +1,9 @@
+<!-- <ng-content select="header"></ng-content> -->
+
 <img [src]="user.imagePath" class="img-fluid rounded-circle" />
-<button (click)="onBtnClick()" class="btn btn-info btn-block">More Info</button>
+<button (click)="onBtnClick()" class="btn btn-info btn-block">
+  <ng-content select=".my-content"></ng-content>
+</button>
+
+
+<!-- <ng-content select="footer"></ng-content> -->

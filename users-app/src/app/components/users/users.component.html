@@ -5,7 +5,13 @@
     <div class="row">
       <div class="col-4 text-center">
         <app-user-img (childEvent)="onMoreInfo($event)"
-          [user]="user"></app-user-img>
+          [user]="user">
+
+          <!-- <header>Header Info</header>
+          <main class="my-content">Show Info</main>
+          <footer>Footer info</footer> -->
+
+        </app-user-img>
       </div>
       <div class="col-8">
         <app-user-info [user]="user"></app-user-info>
