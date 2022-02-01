@@ -9,6 +9,9 @@ export const USER_DATA: Array<IUser> = [{
   income: 50000,
   imagePath: './assets/images/bill.jpg',
   votes: 120,
+  comments : [
+    { stars : 4, author : "john@test.com", body : "Awesome Work"}
+  ]
 },{
   firstName: 'steve',
   lastName: 'jobs',

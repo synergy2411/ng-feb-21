@@ -8,4 +8,5 @@ import { IUser } from 'src/app/model/user.model';
 })
 export class UserInfoComponent {
   @Input() user : IUser;
+  tab : number = 1;
 }

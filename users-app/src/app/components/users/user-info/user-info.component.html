@@ -1,6 +1,6 @@
 <h4>{{ user.firstName }} {{ user.lastName }}</h4>
 <p>Date of Birth : <span [innerText]="user.dob"></span></p>
-<p>Income : {{ user.income }}</p>
+<p *ngIf="user.isWorking;else userNotWorking">Income : {{ user.income }}</p>
 <p>Total Votes :{{ user.votes }}</p>
 <input
   type="number"
@@ -8,3 +8,34 @@
   (change)="user.votes = $event.target.value"
 />
 <input type="number" [(ngModel)]="user.votes" />
+
+<ng-template #userNotWorking>
+  <p>Mr. {{user.lastName}} is NOT working now.</p>
+</ng-template>
+<hr>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab=1">Show Comments</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab=2">Comment Form</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab=3">Description</a>
+  </li>
+</ul>
+
+<div [ngSwitch]="tab">
+  <div *ngSwitchCase="1">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let comment of user.comments">
+        <strong>Stars : {{comment.stars}}</strong>
+        <blockquote>{{comment.body}}<cite class="float-right">-{{comment.author}}</cite></blockquote>
+      </li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="2">Comment form coming soon...</div>
+  <div *ngSwitchCase="3">More information about user...</div>
+  <div *ngSwitchDefault>Default Case</div>
+</div>
