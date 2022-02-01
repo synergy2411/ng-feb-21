@@ -91,3 +91,45 @@
 # Compilation Context - ts-config.json file
 > tsc --init
 > tsc --watch
+
+
+# JavaScript Libraries and Framework
+- *Angular : MVC, UI efficiently, Shadow DOM, Components, Data binding, Templates, SPA, Great CLI Tool, Built Tool, State management, Filerting, formatting, DOM Manipulation, Dependency Injection, SSR, Material theme, XHR/AJAX Calls etc
+- React : rendering the view efficiently; Virtual DOM, Diffing Algorithm, Hooks, Component based architecture; State Management - Redux, react-router : SPA, Form Validation : formik
+- Vue : Evan You; Template oriented; Virtual DOM; Component; state management - vuex etc
+- Redux : State management Tool; browser / server / native device; live code editing; time travel debugging etc
+- Backbone : MVC pattern at client side
+- Knockout : MVVM Pattern; efficient two way data binding
+- AngularJS - v1.x : Library, MV* pattern, components, data-binding, filtering, formatting etc
+- jQuery : DOM manipulation, AJAX Calls, Animations
+- D3 : Creating charts
+- Polymer : Custom Web Components
+- Stencil : Virtual DOM, Creating Web Components, MVC pattern 
+- *Ember : frequently change in API
+
+- Express / Hapi / Koa  : Web framework for Node Platform; Server-side Framework
+- NodeJS : Platform; Server-side
+
+
+# Angular Compilers
+- AoT : Ahead-Of-Time Compiler, Tree-shaking, reduce app size (by 40%), lesser time to load it on device
+- JIT : Just-In-Time Compiler, renders compiled app quickly on browser
+- Angular Universal : Server-side rendering
+
+
+# Angular CLI Tool
+> npm install @angular/cli@8 -g
+> ng --version
+> ng new users-app
+> cd users-app
+> ng serve | npm run start
+
+> cd users-app
+> npm install --legacy-peer-deps
+
+> ng generate component path/to/components/componentName
+> ng g c componentName
+> ng g d directiveName
+> ng g s serviceName
+> ng g p pipeName
+> ng g m moduleModule
