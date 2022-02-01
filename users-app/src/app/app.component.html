@@ -1,3 +1,7 @@
 <h3>Hello Angular!!!</h3>
 
-<app-users></app-users>
+<button class="btn btn-dark" (click)="showComp = !showComp">Toggle Comp</button>
+
+<app-life-cycle-demo *ngIf="showComp" [title]="title"></app-life-cycle-demo>
+
+<!-- <app-users></app-users> -->
