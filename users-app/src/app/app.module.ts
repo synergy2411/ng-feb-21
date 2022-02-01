@@ -9,6 +9,7 @@ import { UserImgComponent } from './components/users/user-img/user-img.component
 import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-demo.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
+import { CountryCodePipe } from './pipes/country-code.pipe';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -18,7 +19,8 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
     UserImgComponent,
     LifeCycleDemoComponent,
     HighlightDirective,
-    PipeDemoComponent
+    PipeDemoComponent,
+    CountryCodePipe
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
