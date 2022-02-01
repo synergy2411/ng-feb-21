@@ -133,3 +133,6 @@
 > ng g s serviceName
 > ng g p pipeName
 > ng g m moduleModule
+
+
+> npm install bootstrap@4 
