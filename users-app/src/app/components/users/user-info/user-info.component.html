@@ -1,6 +1,12 @@
-<h4>{{ user.firstName }} {{ user.lastName }}</h4>
-<p>Date of Birth : <span [innerText]="user.dob"></span></p>
-<p *ngIf="user.isWorking;else userNotWorking">Income : {{ user.income }}</p>
+<h4 appHighlight [favColor]="'#ff45ff'" >{{ user.firstName }} {{ user.lastName }}</h4>
+
+<!-- <p [ngClass]="['my-border', 'my-feature']">Date of Birth : <span [innerText]="user.dob"></span></p> -->
+<button class="btn btn-sm btn-light" (click)="onToggleClasses()">Toggle</button>
+<p [ngClass]="dynamicClasses">Date of Birth : <span [innerText]="user.dob"></span></p>
+
+<p [ngStyle]="dynamicStyles" *ngIf="user.isWorking;else userNotWorking">Income : {{ user.income }}</p>
+
+
 <p>Total Votes :{{ user.votes }}</p>
 <input
   type="number"
@@ -16,13 +22,13 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" (click)="tab=1">Show Comments</a>
+    <a class="nav-link" [ngClass]="{active : tab === 1}" (click)="tab=1">Show Comments</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" (click)="tab=2">Comment Form</a>
+    <a class="nav-link" [ngClass]="{active : tab === 2}" (click)="tab=2">Comment Form</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" (click)="tab=3">Description</a>
+    <a class="nav-link" [ngClass]="{active : tab === 3}" (click)="tab=3">Description</a>
   </li>
 </ul>
 

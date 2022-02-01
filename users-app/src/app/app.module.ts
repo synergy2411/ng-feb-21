@@ -7,6 +7,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { UserImgComponent } from './components/users/user-img/user-img.component';
 import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-demo.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -14,7 +15,8 @@ import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-
     UsersComponent,
     UserInfoComponent,
     UserImgComponent,
-    LifeCycleDemoComponent
+    LifeCycleDemoComponent,
+    HighlightDirective
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
