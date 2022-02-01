@@ -1,10 +1,15 @@
-<h4 appHighlight [favColor]="'#ff45ff'" >{{ user.firstName }} {{ user.lastName }}</h4>
+<!-- {{ user | json }} -->
+
+<h4 appHighlight [favColor]="'#ff45ff'" >
+  {{ user.firstName | titlecase }} {{ user.lastName | titlecase }}</h4>
 
 <!-- <p [ngClass]="['my-border', 'my-feature']">Date of Birth : <span [innerText]="user.dob"></span></p> -->
 <button class="btn btn-sm btn-light" (click)="onToggleClasses()">Toggle</button>
-<p [ngClass]="dynamicClasses">Date of Birth : <span [innerText]="user.dob"></span></p>
+<p [ngClass]="dynamicClasses">
+  Date of Birth : <span [innerText]="user.dob | date : 'dd/MM/yyyy'"></span></p>
 
-<p [ngStyle]="dynamicStyles" *ngIf="user.isWorking;else userNotWorking">Income : {{ user.income }}</p>
+<p [ngStyle]="dynamicStyles" *ngIf="user.isWorking;else userNotWorking">
+  Income : {{ user.income | currency : 'INR' }}</p>
 
 
 <p>Total Votes :{{ user.votes }}</p>
