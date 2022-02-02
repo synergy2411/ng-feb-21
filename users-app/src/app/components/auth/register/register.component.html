@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="text-center">Register Form</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <!-- username -->
+            <div class="form-group">
+              <label for="username">Username :</label>
+              <input type="text"
+                name="username"
+                class="form-control"
+                formControlName="username">
+                <div *ngIf="username.invalid && username.dirty" class="alert alert-danger">
+                  *Some problem with username field
+                  <div *ngIf="username.hasError('required')">
+                    - Username is mandatory field
+                  </div>
+                  <div *ngIf="username.hasError('email')">
+                    - Username should be in proper email format
+                  </div>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+              <label for="password">Password :</label>
+              <input type="password"
+                name="password"
+                class="form-control"
+                formControlName="password">
+                <div *ngIf="password.dirty && password.invalid" class="alert alert-danger">
+                  * Some problem with Password field
+                  <div *ngIf="password.hasError('required')">
+                    - Password is mandatory field
+                  </div>
+                  <div *ngIf="password.hasError('minlength')">
+                    - Password should have 6 characters at least
+                  </div>
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="form-group">
+              <div class="row">
+                <div class="col-6">
+                  <button class="btn btn-primary btn-block"
+                    type="submit" [disabled]="!registerForm.valid">Register</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-warning btn-block">Reset</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

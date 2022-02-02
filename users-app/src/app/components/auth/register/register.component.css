@@ -1,0 +1,12 @@
+.ng-invalid.ng-dirty[name="username"]{
+  background-color: lightcoral;
+}
+.ng-valid.ng-dirty[name="username"]{
+  background-color: lightgreen;
+}
+.ng-invalid.ng-dirty[name="password"]{
+  background-color: lightcoral;
+}
+.ng-valid.ng-dirty[name="password"]{
+  background-color: lightgreen;
+}
