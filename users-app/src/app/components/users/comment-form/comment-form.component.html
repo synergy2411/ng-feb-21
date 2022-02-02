@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <form (ngSubmit)="onAddComment(form)" #form="ngForm">
+          <!-- Stars -->
+          <div class="form-group">
+            <select name="stars" ngModel class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <!-- Body -->
+          <textarea name="body"
+            class="form-control"
+            rows="12"
+            required
+            placeholder="place your text here"
+            ngModel></textarea>
+          <!-- Author -->
+          <input type="email"
+            name="author"
+            class="form-control"
+            required
+            email
+            ngModel>
+          <!-- buttons -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-6">
+                <button class="btn btn-primary btn-block" type="submit">Add Comment</button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-warning btn-block">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

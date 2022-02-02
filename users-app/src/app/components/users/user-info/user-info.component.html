@@ -46,7 +46,9 @@
       </li>
     </ul>
   </div>
-  <div *ngSwitchCase="2">Comment form coming soon...</div>
+  <div *ngSwitchCase="2">
+    <app-comment-form (commentEvent)="onAddNewComment($event)"></app-comment-form>
+  </div>
   <div *ngSwitchCase="3">More information about user...</div>
   <div *ngSwitchDefault>Default Case</div>
 </div>

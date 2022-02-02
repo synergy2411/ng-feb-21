@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Comment } from 'src/app/model/comment.model';
 import { IUser } from 'src/app/model/user.model';
 
 @Component({
@@ -16,5 +17,11 @@ export class UserInfoComponent {
     this.dynamicStyles['text-decoration'] = "none";
     this.dynamicClasses['my-border'] =!this.dynamicClasses['my-border']
     this.dynamicClasses['my-feature'] =!this.dynamicClasses['my-feature']
+  }
+
+  onAddNewComment(comment : Comment){
+    console.log("Comment : ", comment)
+    this.user.comments.push(comment);
+    this.tab = 1;
   }
 }
