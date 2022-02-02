@@ -44,6 +44,43 @@
                   </div>
                 </div>
             </div>
+
+            <!-- Courses -->
+            <div class="form-group">
+              <label for="courses">Courses :</label>
+              <button (click)="addCourse()"
+                type="button"
+                class="btn btn-dark btn-sm">Add Course</button>
+              <div *ngFor="let course of courses.controls; index as i">
+                <input type="text" [formControl]="courses.controls[i]">
+                <button class="btn btn-danger btn-sm" (click)="removeCourse(i)">X</button>
+              </div>
+                <br>
+              {{courses.value | json}}
+            </div>
+
+            <!-- Hobbies -->
+            <div class="form-group">
+              <label for="hobbies">Hobbies</label>
+              <button class="btn btn-dark"
+                (click)="addHobby()"
+                type="button">Add Hobby</button>
+                <div *ngFor="let hobby of hobbies.controls">
+                  <div [formGroup]="hobby">
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="text" formControlName="name" placeholder="hobby name" class="form-control">
+                      </div>
+                      <div class="col-6">
+                        <input type="number" formControlName="frequency" placeholder="frequency" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                {{ hobbies.value | json}}
+            </div>
+
             <!-- buttons -->
             <div class="form-group">
               <div class="row">

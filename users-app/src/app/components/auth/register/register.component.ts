@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -18,6 +18,26 @@ export class RegisterComponent implements OnInit {
     this.hasExclamationMark
   ]);
   registerForm : FormGroup;
+  courses = new FormArray([]);
+
+  hobbies = new FormArray([]);
+
+  addHobby(){
+    const hobby = new FormGroup({
+      name : new FormControl(''),
+      frequency : new FormControl('')
+    })
+    this.hobbies.push(hobby);
+  }
+
+  addCourse(){
+    this.courses.push(new FormControl(''))
+    console.log(this.courses);
+  }
+
+  removeCourse(index: number){
+    this.courses.removeAt(index);
+  }
 
   constructor(private fb : FormBuilder) {
     this.registerForm = this.fb.group({
