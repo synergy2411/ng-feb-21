@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addCourse(){
+    debugger;
     this.courses.push(new FormControl(''))
     console.log(this.courses);
   }
