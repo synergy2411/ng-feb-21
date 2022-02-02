@@ -17,6 +17,19 @@ export class PipeDemoComponent implements OnInit {
 
   helloWorld = "Hello World"
 
+  filteredStatus = '';
+
+  todoCollection = [
+    {label : "planting", status : 'completed'},
+    {label : "insurance", status : 'pending'},
+    {label : "shopping", status : 'completed'},
+    {label : "grocery", status : 'pending'},
+  ]
+
+  onAddNewTodo(){
+    this.todoCollection.push({label : "New Item", status : "pending"})
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,10 @@
+<!-- <p [ngClass]="['my-border','my-font']">CSS Class will apply here</p> -->
+<!-- <p [ngClass]="{'my-border' : true,'my-font' : false}">CSS Class will apply here</p> -->
+
+<button (click)="onToggle()" class="btn btn-primary">Toggle Classes</button>
+
+<p [ngClass]="myClasses">CSS Class will apply here</p>
+
+<input type="text" [(ngModel)]="username">
+
+<h5>User name : {{ username }}</h5>

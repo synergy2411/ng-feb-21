@@ -11,6 +11,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -22,7 +24,9 @@ import { ReversePipe } from './pipes/reverse.pipe';
     HighlightDirective,
     PipeDemoComponent,
     CountryCodePipe,
-    ReversePipe
+    ReversePipe,
+    DirectiveDemoComponent,
+    FilterPipe
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,

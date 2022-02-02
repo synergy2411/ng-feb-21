@@ -140,3 +140,27 @@
 # Component Types
 - Smart | Container | Parent (UsersComponent) - business logic, contains other component
 - Dump | Presentational | Child (UserImg, UserInfo) - receives data from parent component to create the UI
+
+
+
+# Pure Change
+
+let user = {name :"John"}
+
+// Impure Change
+user.name = "James"
+
+// Pure Change
+user = {name : "Jenny"}
+
+
+let fruits = ["apple", "banana"]
+
+// Impure Change
+fruits.push("guava")
+
+// Pure Change
+fruits = ["apple", "banana", "guava"]
+
+# Pure pipes will run on pure changes only (default)
+# Impure pipes will run on pure as well as impure changes
