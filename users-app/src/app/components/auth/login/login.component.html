@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="text-center">Login Form</h4>
+        </div>
+        <div class="card-body">
+          <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email"
+                name="email"
+                class="form-control"
+                ngModel
+                required
+                email >
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+              <label for="password">Password :</label>
+              <input type="password"
+                name="password"
+                class="form-control"
+                ngModel
+                required
+                minlength="6">
+            </div>
+            <!-- Buttons -->
+            <div class="form-group">
+              <div class="row">
+                <div class="col-6">
+                  <button type="submit"
+                    class="btn btn-block btn-primary btn-sm"
+                    [disabled]="!loginForm.valid">
+                    Submit</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-block btn-warning btn-sm"
+                    type="button"
+                    (click)="onReset(loginForm)">
+                    Reset</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

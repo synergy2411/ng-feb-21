@@ -13,6 +13,7 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -26,7 +27,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     CountryCodePipe,
     ReversePipe,
     DirectiveDemoComponent,
-    FilterPipe
+    FilterPipe,
+    LoginComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
