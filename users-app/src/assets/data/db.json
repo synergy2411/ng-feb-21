@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "grocery",
+      "body": "to buy the pulses"
+    },
+    {
+      "id": "2",
+      "title": "shopping",
+      "body": "to buy the jeans"
+    },
+    {
+      "body": "to renew bike insrance",
+      "id": "1643799067695",
+      "title": "insurance"
+    },
+    {
+      "body": "to pot new plants",
+      "id": "1643799086869",
+      "title": "planting"
+    }
+  ]
+}

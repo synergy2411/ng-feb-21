@@ -1,0 +1,19 @@
+/* .backdrop{
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 50%;
+}
+
+.my-card{
+  background-color: white;
+  margin-left: 20vw;
+  margin-top: 30vh;
+  width: 60vw;
+  height: 40vh;
+  position: fixed;
+  z-index: 75%;
+} */

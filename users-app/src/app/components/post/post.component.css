@@ -1,0 +1,8 @@
+.my-card-title{
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-card-title:hover{
+  background-color: lightgrey;
+}

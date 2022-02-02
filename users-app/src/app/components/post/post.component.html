@@ -1,0 +1,24 @@
+<div class="container">
+  <p class="display-4 text-center">My Awesome Posts</p>
+  <div class="row">
+    <div class="col-4 offset-4">
+      <button class="btn btn-dark btn-block"
+        (click)="showAddPost = !showAddPost">Add New Post</button>
+    </div>
+  </div>
+  <div class="row" *ngIf="showAddPost">
+    <div class="col-6 offset-3">
+      <app-add-post></app-add-post>
+    </div>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngFor="let post of posts">
+      <div class="card my-card-title">
+        <div class="card-body">
+          <h5 class="text-center">{{post.title | uppercase}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

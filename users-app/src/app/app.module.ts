@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -20,6 +21,8 @@ import { DataService } from './services/data.service';
 import { CounterService } from './services/counter.service';
 import { CompOneComponent } from './components/counter/comp-one/comp-one.component';
 import { CompTwoComponent } from './components/counter/comp-two/comp-two.component';
+import { PostComponent } from './components/post/post.component';
+import { AddPostComponent } from './components/post/add-post/add-post.component';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -38,12 +41,15 @@ import { CompTwoComponent } from './components/counter/comp-two/comp-two.compone
     CommentFormComponent,
     RegisterComponent,
     CompOneComponent,
-    CompTwoComponent
+    CompTwoComponent,
+    PostComponent,
+    AddPostComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [DataService],          // service
   bootstrap: [AppComponent]
