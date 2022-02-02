@@ -164,3 +164,15 @@ fruits = ["apple", "banana", "guava"]
 
 # Pure pipes will run on pure changes only (default)
 # Impure pipes will run on pure as well as impure changes
+
+
+# Forms and Form Controls - State and Classes
+- ngValid | ngInvalid
+- ngPristine | ngDirty
+- ngTouched | ngUntouched
+
+
+> ng new ng-workspace --create-application=false
+> cd ng-workspace
+> ng generate application <appName>
+> ng generate library <libName>

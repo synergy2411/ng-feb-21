@@ -45,7 +45,7 @@ import { CompTwoComponent } from './components/counter/comp-two/comp-two.compone
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [DataService, CounterService],          // service
+  providers: [DataService],          // service
   bootstrap: [AppComponent]
 })
 export class AppModule { }
