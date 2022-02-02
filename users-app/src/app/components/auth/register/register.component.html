@@ -39,6 +39,9 @@
                   <div *ngIf="password.hasError('minlength')">
                     - Password should have 6 characters at least
                   </div>
+                  <div *ngIf="password.hasError('needExclamation')">
+                    - Password should have Exclamation mark (!)
+                  </div>
                 </div>
             </div>
             <!-- buttons -->
