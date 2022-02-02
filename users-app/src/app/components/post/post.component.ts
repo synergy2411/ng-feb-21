@@ -14,8 +14,16 @@ export class PostComponent implements OnInit {
   constructor(private postService : PostService) { }
 
   ngOnInit(): void {
+    this.loadNotes()
+  }
+
+  private loadNotes(){
     this.postService.getPosts()
       .subscribe(response => this.posts = response)
   }
 
+  onPostAdded(flag : boolean){
+    this.loadNotes();
+    this.showAddPost = false;
+  }
 }

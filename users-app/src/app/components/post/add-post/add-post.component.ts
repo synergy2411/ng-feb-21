@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Post } from 'src/app/model/post.model';
 import { PostService } from 'src/app/services/post.service';
+
 
 @Component({
   selector: 'app-add-post',
@@ -9,6 +10,8 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./add-post.component.css']
 })
 export class AddPostComponent implements OnInit {
+
+  @Output() addPostEvent = new EventEmitter<boolean>();
 
   constructor(private postService : PostService) { }
 
@@ -25,6 +28,7 @@ export class AddPostComponent implements OnInit {
     this.postService.createPost(post)
       .subscribe(response =>{
         console.log("Posted!!")
+        this.addPostEvent.emit(true);
         myForm.reset();
       })
   }

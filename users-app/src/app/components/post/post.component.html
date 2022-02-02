@@ -8,7 +8,7 @@
   </div>
   <div class="row" *ngIf="showAddPost">
     <div class="col-6 offset-3">
-      <app-add-post></app-add-post>
+      <app-add-post (addPostEvent)="onPostAdded($event)"></app-add-post>
     </div>
     <hr>
   </div>
