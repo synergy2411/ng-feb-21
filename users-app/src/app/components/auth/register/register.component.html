@@ -45,6 +45,17 @@
                 </div>
             </div>
 
+            <!-- Skills -->
+            <div class="form-group">
+              <label for="skills">Skills : </label>
+              <button (click)="addSkills()" class="btn btn-dark btn-sm">Add Skill</button>
+              <div formArrayName="skills">
+                <div *ngFor="let control of skills.controls; index as i">
+                  <input type="text" [formControlName]="i">
+                </div>
+              </div>
+            </div>
+            {{ skills.value | json}}
             <!-- Courses -->
             <div class="form-group">
               <label for="courses">Courses :</label>
@@ -69,10 +80,16 @@
                   <div [formGroup]="hobby">
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" formControlName="name" placeholder="hobby name" class="form-control">
+                        <input type="text"
+                          formControlName="name"
+                          placeholder="hobby name"
+                          class="form-control">
                       </div>
                       <div class="col-6">
-                        <input type="number" formControlName="frequency" placeholder="frequency" class="form-control">
+                        <input type="number"
+                          formControlName="frequency"
+                          placeholder="frequency"
+                          class="form-control">
                       </div>
                     </div>
                   </div>

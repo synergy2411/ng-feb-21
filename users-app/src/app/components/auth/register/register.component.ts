@@ -42,8 +42,17 @@ export class RegisterComponent implements OnInit {
   constructor(private fb : FormBuilder) {
     this.registerForm = this.fb.group({
       username : this.username,
-      password : this.password
+      password : this.password,
+      skills : new FormArray([])
     })
+   }
+
+   get skills(){
+     return this.registerForm.get("skills") as FormArray;
+   }
+
+   addSkills(){
+     this.skills.push(new FormControl(''))
    }
 
    onRegister(){
