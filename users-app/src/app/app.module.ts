@@ -29,6 +29,9 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { DataService } from './services/data.service';
 import { LoggerInterceptorService } from './services/logger-interceptor.service';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductComponent } from './components/product/product.component';
+import { OverviewComponent } from './components/product/overview/overview.component';
+import { SpecificationComponent } from './components/product/specification/specification.component';
 
 
 @NgModule({
@@ -54,7 +57,10 @@ import { HeaderComponent } from './components/header/header.component';
     EditPostComponent,
     ObservableDemoComponent,
     ObsPipeableOperatorsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent,
+    OverviewComponent,
+    SpecificationComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
