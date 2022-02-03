@@ -7,6 +7,7 @@ import { OverviewComponent } from "./components/product/overview/overview.compon
 import { ProductComponent } from "./components/product/product.component";
 import { SpecificationComponent } from "./components/product/specification/specification.component";
 import { UsersComponent } from "./components/users/users.component";
+import { DeactivatedGaurdService } from "./service/deactivated-gaurd.service";
 import { LoginGaurdService } from "./services/login-gaurd.service";
 
 export const APP_ROUTES : Routes = [
@@ -19,7 +20,8 @@ export const APP_ROUTES : Routes = [
     component : LoginComponent
   },{
     path : "register",      // http://localhost:4200/register
-    component : RegisterComponent
+    component : RegisterComponent,
+    canDeactivate : [DeactivatedGaurdService]
   },{
     path : "users",         // http://localhost:4200/users
     component : UsersComponent,

@@ -74,4 +74,12 @@ export class RegisterComponent implements OnInit {
     return hasExclamation ? null : {needExclamation : true}
   }
 
+  shouldLeave(){
+    if(confirm("Are you sure to leave this page?")){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
 }
