@@ -18,7 +18,7 @@ export class ObsPipeableOperatorsComponent implements OnInit, AfterViewInit {
 
   gits = [];
 
-  @ViewChild("search") txtSerach : ElementRef;
+  @ViewChild("search", { static : false}) txtSerach : ElementRef;
 
   ngAfterViewInit(): void {
     let changetext$ = fromEvent(this.txtSerach.nativeElement, "input")

@@ -1,46 +1,59 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import firebase from 'firebase';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  private token: string = null;
 
-  private token : string = null;
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  onRegister(email : string, password : string){
-    firebase.auth().createUserWithEmailAndPassword(email,password)
-      .then(response => {
-        console.log("Regitered Successfully")
-      }).catch(err => console.log(err))
+  onRegister(email: string, password: string) {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((response) => {
+        console.log('Regitered Successfully');
+      })
+      .catch((err) => console.log(err));
   }
 
-  onLogin(email : string, password : string){
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(response => {
-        firebase.auth().currentUser.getIdToken()
-          .then(token => {
-            console.log("[TOKEN]", token);
+  onLogin(email: string, password: string) {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((response) => {
+        firebase
+          .auth()
+          .currentUser.getIdToken()
+          .then((token) => {
+            console.log('[TOKEN]', token);
             this.token = token;
-          }).catch(err => console.log(err))
-      }).catch(err => console.log(err))
+            // localStorage.setItem("token", JSON.stringify(token))
+            this.router.navigate(['users']);
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
   }
 
-  onLogout(){
-    firebase.auth().signOut()
-      .then(response => {
+  onLogout() {
+    firebase
+      .auth()
+      .signOut()
+      .then((response) => {
         this.token = null;
+        this.router.navigate(['login'])
       });
   }
 
-  isAuthenticated(){
+  isAuthenticated() {
     return this.token != null;
   }
 
-  getToken(){
+  getToken() {
     return this.token;
   }
-
 }
