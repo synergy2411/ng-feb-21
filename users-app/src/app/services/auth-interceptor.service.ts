@@ -12,8 +12,6 @@ export class AuthInterceptorService implements HttpInterceptor {
     const clonedReq = req.clone({
       params : new HttpParams().set("auth", this.authService.getToken())
     })
-    console.log("[Incoming Request]", req)
-    console.log("[Cloned Request]", clonedReq)
 
     return next.handle(clonedReq)
   }

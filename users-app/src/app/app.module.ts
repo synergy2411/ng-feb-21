@@ -25,6 +25,7 @@ import { PostComponent } from './components/post/post.component';
 import { AddPostComponent } from './components/post/add-post/add-post.component';
 import { EditPostComponent } from './components/post/edit-post/edit-post.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { LoggerInterceptorService } from './services/logger-interceptor.service';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -59,6 +60,10 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
     {
       provide : HTTP_INTERCEPTORS,
       useClass : AuthInterceptorService,
+      multi : true
+    },{
+      provide :HTTP_INTERCEPTORS,
+      useClass : LoggerInterceptorService,
       multi : true
     }
   ],          // service
