@@ -26,6 +26,7 @@ import { AddPostComponent } from './components/post/add-post/add-post.component'
 import { EditPostComponent } from './components/post/edit-post/edit-post.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { LoggerInterceptorService } from './services/logger-interceptor.service';
+import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -47,7 +48,8 @@ import { LoggerInterceptorService } from './services/logger-interceptor.service'
     CompTwoComponent,
     PostComponent,
     AddPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    ObservableDemoComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
