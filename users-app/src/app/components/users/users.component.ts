@@ -14,7 +14,8 @@ export class UsersComponent implements OnInit{
   constructor(private dataService : DataService){}
 
   ngOnInit(): void {
-      this.users = this.dataService.getUserData()
+      this.dataService.getUserData()
+        .subscribe(users => this.users = users)
   }
 
   onMoreInfo(usr : IUser){
