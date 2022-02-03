@@ -14,7 +14,7 @@
   </div>
   <div class="row">
     <div class="col-4" *ngFor="let post of posts">
-      <div class="card my-card-title">
+      <div class="card my-card-title" (click)="selectPost(post)">
         <div class="card-body">
           <h5 class="text-center">{{post.title | uppercase}}</h5>
         </div>
@@ -22,3 +22,8 @@
     </div>
   </div>
 </div>
+
+<hr>
+<app-edit-post *ngIf="showEditPost"
+  [post]="selectedPost"
+  (editPostEvent)="onPostEdit($event)" ></app-edit-post>

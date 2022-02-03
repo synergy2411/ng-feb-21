@@ -11,6 +11,9 @@ export class PostComponent implements OnInit {
 
   posts : Array<Post>
   showAddPost : boolean = false;
+  showEditPost : boolean = false;
+  selectedPost : Post;
+
   constructor(private postService : PostService) { }
 
   ngOnInit(): void {
@@ -25,5 +28,15 @@ export class PostComponent implements OnInit {
   onPostAdded(flag : boolean){
     this.loadNotes();
     this.showAddPost = false;
+  }
+
+  selectPost(post : Post){
+    this.showEditPost = true;
+    this.selectedPost = post;
+  }
+
+  onPostEdit(flag : boolean){
+    this.showEditPost = false;
+    this.loadNotes();
   }
 }

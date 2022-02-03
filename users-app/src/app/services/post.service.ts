@@ -23,8 +23,8 @@ export class PostService {
     return this.httpClient.delete(`${this.baseUrl}/${id}`)
   }
 
-  editPost(id : string, post : Post ){
-    return this.httpClient.patch(`${this.baseUrl}/${id}`,post)
+  editPost(id : string, body : string){
+    return this.httpClient.patch(`${this.baseUrl}/${id}`,{body})
   }
 
 }

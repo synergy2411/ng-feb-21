@@ -27,7 +27,16 @@ export class PipeDemoComponent implements OnInit {
   ]
 
   onAddNewTodo(){
+  //  Impure Change
     this.todoCollection.push({label : "New Item", status : "pending"})
+    // Pure Change
+    this.todoCollection = [
+      {label : "planting", status : 'completed'},
+      {label : "insurance", status : 'pending'},
+      {label : "shopping", status : 'completed'},
+      {label : "grocery", status : 'pending'},
+      {label : "New ITem", status : "completed"}
+    ]
   }
 
   constructor() { }

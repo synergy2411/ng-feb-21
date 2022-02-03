@@ -23,6 +23,7 @@ import { CompOneComponent } from './components/counter/comp-one/comp-one.compone
 import { CompTwoComponent } from './components/counter/comp-two/comp-two.component';
 import { PostComponent } from './components/post/post.component';
 import { AddPostComponent } from './components/post/add-post/add-post.component';
+import { EditPostComponent } from './components/post/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -43,7 +44,8 @@ import { AddPostComponent } from './components/post/add-post/add-post.component'
     CompOneComponent,
     CompTwoComponent,
     PostComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
