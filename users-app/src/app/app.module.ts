@@ -27,6 +27,7 @@ import { EditPostComponent } from './components/post/edit-post/edit-post.compone
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { LoggerInterceptorService } from './services/logger-interceptor.service';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
+import { ObsPipeableOperatorsComponent } from './components/obs-pipeable-operators/obs-pipeable-operators.component';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -49,7 +50,8 @@ import { ObservableDemoComponent } from './components/observable-demo/observable
     PostComponent,
     AddPostComponent,
     EditPostComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    ObsPipeableOperatorsComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,

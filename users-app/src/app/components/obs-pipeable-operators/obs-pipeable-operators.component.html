@@ -1,0 +1,13 @@
+<p>obs-pipeable-operators works!</p>
+
+<button class="btn btn-primary" (click)="onSubscribe()">Subscribe</button>
+
+<hr>
+
+<input type="text" #search>
+
+<ul>
+  <li *ngFor="let git of gits">
+    {{git.git_url}}
+  </li>
+</ul>
