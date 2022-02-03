@@ -15,4 +15,23 @@ export class AuthService {
       }).catch(err => console.log(err))
   }
 
+  onLogin(email : string, password : string){
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(response => {
+        console.log("Logged In")
+        firebase.auth().currentUser.getIdToken()
+          .then(token => {
+            console.log("[TOKEN]", token);
+          }).catch(err => console.log(err))
+      }).catch(err => console.log(err))
+  }
+
+  onLogout(){
+    return firebase.auth().signOut();
+  }
+
+  isAuthenticated(){
+
+  }
+
 }
