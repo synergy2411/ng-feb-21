@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -40,7 +41,10 @@ export class RegisterComponent implements OnInit {
     this.courses.removeAt(index);
   }
 
-  constructor(private fb : FormBuilder) {
+  constructor(
+    private fb : FormBuilder,
+    private authService : AuthService
+    ) {
     this.registerForm = this.fb.group({
       username : this.username,
       password : this.password,
@@ -58,6 +62,8 @@ export class RegisterComponent implements OnInit {
 
    onRegister(){
      console.log(this.registerForm);
+     const {username, password} = this.registerForm.value;
+     this.authService.onRegister(username, password)
    }
 
   ngOnInit(): void {
