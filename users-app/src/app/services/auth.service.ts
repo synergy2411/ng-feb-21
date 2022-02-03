@@ -6,6 +6,8 @@ import firebase from 'firebase';
 })
 export class AuthService {
 
+  private token : string = null;
+
   constructor() { }
 
   onRegister(email : string, password : string){
@@ -18,20 +20,27 @@ export class AuthService {
   onLogin(email : string, password : string){
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(response => {
-        console.log("Logged In")
         firebase.auth().currentUser.getIdToken()
           .then(token => {
             console.log("[TOKEN]", token);
+            this.token = token;
           }).catch(err => console.log(err))
       }).catch(err => console.log(err))
   }
 
   onLogout(){
-    return firebase.auth().signOut();
+    firebase.auth().signOut()
+      .then(response => {
+        this.token = null;
+      });
   }
 
   isAuthenticated(){
+    return this.token != null;
+  }
 
+  getToken(){
+    return this.token;
   }
 
 }
