@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUser } from '../model/user.model';
@@ -15,8 +15,10 @@ export class DataService {
     ) {}
 
   getUserData() : Observable<Array<IUser>> {
-    return this.http.get<Array<IUser>>(this.baseUrl, {
-      params : new HttpParams().set("auth", this.authService.getToken())
-    })
+    return this.http.get<Array<IUser>>(this.baseUrl)
+    // return this.http.get<Array<IUser>>(this.baseUrl, {
+    //   params : new HttpParams().set("auth", this.authService.getToken()),
+    //   // headers : new HttpHeaders().set("authorization", `Bearer ${this.authService.getToken()}`)
+    // })
   }
 }

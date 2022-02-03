@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -24,6 +24,7 @@ import { CompTwoComponent } from './components/counter/comp-two/comp-two.compone
 import { PostComponent } from './components/post/post.component';
 import { AddPostComponent } from './components/post/add-post/add-post.component';
 import { EditPostComponent } from './components/post/edit-post/edit-post.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
 
 @NgModule({
   declarations: [         // components, directives, pipes
@@ -53,7 +54,14 @@ import { EditPostComponent } from './components/post/edit-post/edit-post.compone
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [DataService],          // service
+  providers: [
+    DataService,
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : AuthInterceptorService,
+      multi : true
+    }
+  ],          // service
   bootstrap: [AppComponent]
 })
 export class AppModule { }
