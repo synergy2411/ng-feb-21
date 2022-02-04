@@ -40,6 +40,9 @@ export const APP_ROUTES : Routes = [
       {path : "specification", component : SpecificationComponent}
     ]
   },{
+    path : "lazy",
+    loadChildren : () => import("./modules/lazy/lazy.module").then(m => m.LazyModule)
+  },{
     path : "**",                // http://localhost:4200/doesNotExist
     redirectTo : "login",
     pathMatch : "full"

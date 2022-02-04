@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { EagerModule } from './modules/eager/eager.module';
+
+
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { LoginComponent } from './components/auth/login/login.component';
@@ -67,7 +70,8 @@ import { SpecificationComponent } from './components/product/specification/speci
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    EagerModule
   ],
   providers: [
     DataService,

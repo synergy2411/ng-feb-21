@@ -145,22 +145,22 @@
 
 # Pure Change
 
-let user = {name :"John"}
+let user = {name :"John"}           // xxxx09iudyxhx
 
 // Impure Change
-user.name = "James"
+user.name = "James"                 // xxxx09iudyxhx
 
 // Pure Change
-user = {name : "Jenny"}
+user = {name : "Jenny"}            // xxxx098djbwbd
 
 
-let fruits = ["apple", "banana"]
+let fruits = ["apple", "banana"]            // xxxx0909ufkjjsk
 
 // Impure Change
-fruits.push("guava")
+fruits.push("guava")                    // xxxx0909ufkjjsk
 
 // Pure Change
-fruits = ["apple", "banana", "guava"]
+fruits = ["apple", "banana", "guava"]       // xxxxiuefbmd98
 
 # Pure pipes will run on pure changes only (default)
 # Impure pipes will run on pure as well as impure changes
@@ -176,3 +176,62 @@ fruits = ["apple", "banana", "guava"]
 > cd ng-workspace
 > ng generate application <appName>
 > ng generate library <libName>
+
+
+# JSON-SERVER install command
+> npm install json-server -g
+> json-server --watch db.json
+
+https://kcctechnologies.com/feedback/
+https://kcctechnologies.com/feedback/online_attendance_form/
+
+
+# Observable API
+- are cold [by default]
+- are lazy (don't execute until subscribe)
+- emits series of data (multiplle data on same stream)
+- pipeable operators (backbone of observable API)
+- are cancelable (unsubscribable)
+- based upon Events API (PubSub pattern)
+- keeps the data source under watch condition
+
+# Creational Operators
+- from
+- of
+- timer
+- range
+- interval
+- fromEvent
+- Observable Constructor
+
+
+# Pipeable Operators - pipe(operator())
+
+> npm uninstall firebase --save
+> npm i firebase@8
+
+
+# Single Page App
+- One HTML page
+- Page will NOT reload / refresh
+- User interactivity
+- Served in one go
+- less network bandwidth
+
+# SPA Mode
+- HTML5 Mode / Regular URL Mode -> http://www.your-domain.com/index/product
+- Hashbang Mode (#) -> http://www.your-domain.com/index/#/product
+- http://localhost:4200/product/overview
+
+
+# Routing Terminologies
+- Routes : Create the configuration to map components with url
+- RouterModule - enable SPA, accepts route configuration
+- RouterOutlet - provides the space on view to load the component template
+- Router - programmatically navigate 
+- ActivatedRoute - access to URL
+
+
+
+- Chrome debugger
+- Window back button
