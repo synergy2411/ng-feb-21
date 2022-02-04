@@ -8,6 +8,7 @@ import { ProductComponent } from "./components/product/product.component";
 import { SpecificationComponent } from "./components/product/specification/specification.component";
 import { UsersComponent } from "./components/users/users.component";
 import { DeactivatedGaurdService } from "./service/deactivated-gaurd.service";
+import { DisableLoginService } from "./services/disable-login.service";
 import { LoginGaurdService } from "./services/login-gaurd.service";
 
 export const APP_ROUTES : Routes = [
@@ -17,7 +18,8 @@ export const APP_ROUTES : Routes = [
     pathMatch : "full"
   },{
     path : "login",         // http://localhost:4200/login
-    component : LoginComponent
+    component : LoginComponent,
+    canActivate : [DisableLoginService]
   },{
     path : "register",      // http://localhost:4200/register
     component : RegisterComponent,

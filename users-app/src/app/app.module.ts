@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { EagerModule } from './modules/eager/eager.module';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 
 
 import { AppComponent } from './app.component';
@@ -76,7 +77,8 @@ import { ChangeDetectionDemoyComponent } from './components/change-detection-dem
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
     EagerModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    // BackButtonDisableModule.forRoot()
   ],
   providers: [
     DataService,
