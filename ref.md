@@ -232,6 +232,40 @@ https://kcctechnologies.com/feedback/online_attendance_form/
 - ActivatedRoute - access to URL
 
 
+# ng add @angular/pwa
+
+# ng build --prod
+
+
+> npm install -g http-server
+> ng build --prod
+> cd dist/users-app
+> http-server -p 8081
+
+
 
 - Chrome debugger
 - Window back button
+
+
+# Creating Production build with AOT compilation
+> ng build --prod --aot
+> ng build
+
+# Firebase Deployment Steps -
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- firebase deploy
+
+
+# Unit Testing
+- Component
+- Service
+- Pipe
+
+- Karma : test-runner
+- Jasmine : Testing Framework for JavaScript Apps
+: describe() - Testing Suites
+: it() - single test
+: expect() - Assertion
