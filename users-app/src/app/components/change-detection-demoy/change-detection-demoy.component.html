@@ -1,0 +1,13 @@
+<p>change-detection-demoy works!</p>
+
+<h5>User name in Child Comp : {{ user.name }} </h5>
+
+<hr>
+
+
+<button class="btn btn-info" (click)="addNewNote()">Add New Note</button>
+<ul>
+  <li *ngFor="let note of notes; trackBy : trackById">
+    {{note.title}}
+  </li>
+</ul>

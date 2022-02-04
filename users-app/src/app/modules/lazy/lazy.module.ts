@@ -15,6 +15,7 @@ const LAZY_ROUTES : Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(LAZY_ROUTES)
-  ]
+  ],
+  providers:    []
 })
 export class LazyModule { }

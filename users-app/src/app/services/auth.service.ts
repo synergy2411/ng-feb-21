@@ -32,6 +32,7 @@ export class AuthService {
             console.log('[TOKEN]', token);
             this.token = token;
             // localStorage.setItem("token", JSON.stringify(token))
+            history.pushState(null, null, location.href);
             this.router.navigate(['users']);
           })
           .catch((err) => console.log(err));

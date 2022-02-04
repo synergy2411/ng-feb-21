@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import * as firebase from 'firebase'
 import { AuthService } from './services/auth.service';
 
@@ -10,8 +11,18 @@ import { AuthService } from './services/auth.service';
 export class AppComponent implements OnInit {
   title = 'users-app';
   showComp : boolean = true;
+  user = { name : "Foo" };
 
-  constructor(private authService : AuthService){}
+  snippets = "Some Value <script>alert('XSS Attach')</script"
+  externalUrl ="javascript:alert('Hello from external URL')"
+  safeUrl: SafeResourceUrl;
+
+
+  constructor(
+      private authService : AuthService,
+      private sanitize : DomSanitizer){
+        this.safeUrl = this.sanitize.bypassSecurityTrustResourceUrl(this.externalUrl)
+      }
 
   ngOnInit(): void {
       firebase.default.initializeApp({
@@ -24,4 +35,10 @@ export class AppComponent implements OnInit {
     return this.authService.isAuthenticated();
   }
 
+  onImpureChange(){
+    this.user.name = "Bar"
+  }
+  onPureChange(){
+    this.user = { name : "Baz" }
+  }
 }

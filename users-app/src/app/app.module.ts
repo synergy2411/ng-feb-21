@@ -35,6 +35,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
 import { OverviewComponent } from './components/product/overview/overview.component';
 import { SpecificationComponent } from './components/product/specification/specification.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { ChangeDetectionDemoyComponent } from './components/change-detection-demoy/change-detection-demoy.component';
 
 
 @NgModule({
@@ -63,7 +66,8 @@ import { SpecificationComponent } from './components/product/specification/speci
     HeaderComponent,
     ProductComponent,
     OverviewComponent,
-    SpecificationComponent
+    SpecificationComponent,
+    ChangeDetectionDemoyComponent
   ],
   imports: [              // Module - built-in / Custom
     BrowserModule,
@@ -71,7 +75,8 @@ import { SpecificationComponent } from './components/product/specification/speci
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
-    EagerModule
+    EagerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     DataService,
