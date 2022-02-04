@@ -249,7 +249,7 @@ https://kcctechnologies.com/feedback/online_attendance_form/
 
 
 # Creating Production build with AOT compilation
-> ng build --prod --aot
+> ng build --test --aot
 > ng build
 
 # Firebase Deployment Steps -

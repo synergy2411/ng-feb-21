@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
+  url = environment.baseURL;
+
   USER_DATA = [
     {
       id: '1',
